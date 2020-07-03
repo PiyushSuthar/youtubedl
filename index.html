@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>YouTube Video And MP3 downloader</h1>
+      </header>
+      <input type="url" placeholder="Video Url" id="urlInput" />
+      <div class="buttons">
+        <button
+          onclick="downloadMp3(document.getElementById('urlInput').value)"
+          class="button"
+        >
+          Download Mp3
+        </button>
+        <button
+          onclick="downloadMp4(document.getElementById('urlInput').value)"
+          class="button"
+        >
+          Download Mp4 (360p)
+        </button>
+      </div>
+
+      <div class="bookmark">
+        <h2>Want a bookmark for chrome?</h2>
+        <p>Drag and Drop this button in your BookMarks</p>
+        <br />
+        <div class="book">
+          <a
+            class="button"
+            href='javascript:(function() {
+            if (window.location.host === "www.youtube.com") {
+              const youtubeId = window.location.search.split("v=")[1];
+              const url = `https://youtubedlbackend.herokuapp.com/mp3?url=https://youtube.com/watch?v=${youtubeId}`;
+              window.open(url);
+            }
+          })();'
+            >Download MP3</a
+          >
+        </div>
+      </div>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>

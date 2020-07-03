@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  font-family: sans-serif;
+  height: 100%;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 20vh;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+#urlInput {
+  border: none;
+  padding: 20px;
+  max-width: 600px;
+  width: 80%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  margin: 10px;
+  outline: none;
+}
+.button {
+  all: unset;
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px;
+  background-color: rgb(43, 71, 231);
+  color: white;
+}
+.bookmark {
+  margin-top: 5vh;
+  text-align: center;
+}
+.bookmark .book a {
+  padding: 15px;
+  background-color: rgb(43, 71, 231);
+  margin: 10px;
+}
